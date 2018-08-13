@@ -1,0 +1,243 @@
+Script started on Tue 08 May 2018 03:30:25 PM EDT
+vyong@cisc450:~/cisc450/proj2$ ls =l[K[K-k[Kl
+total 47
+-rw-r--r-- 1 vyong vyong  7663 May  8 14:28 bak
+-rw-rw-r-- 1 vyong vyong     0 May  8 15:30 client-script
+-rw-r--r-- 1 vyong vyong   249 May  8 15:23 Makefile
+-rw-rw-r-- 1 vyong vyong  2510 May  8 15:29 out.txt
+-rwxrwxr-x 1 vyong vyong   810 May  8 15:23 proj2common.c
+-rwxrwxr-x 1 vyong vyong   353 May  8 15:23 proj2common.h
+-rw-r--r-- 1 vyong vyong  1159 May  8 15:23 test1.txt
+-rw-r--r-- 1 vyong vyong  2510 May  8 15:23 test2.txt
+-rwxrwxr-x 1 vyong vyong 13966 May  8 15:24 udpclient
+-rw-r--r-- 1 vyong vyong  9326 May  8 15:23 udpclient.c
+-rwxrwxr-x 1 vyong vyong 13938 May  8 15:24 udpserver
+-rw-r--r-- 1 vyong vyong  8002 May  8 15:23 udpserver.c
+vyong@cisc450:~/cisc450/proj2$ make
+make: Nothing to be done for `all'.
+vyong@cisc450:~/cisc450/proj2$ ls -l
+total 47
+-rw-r--r-- 1 vyong vyong  7663 May  8 14:28 bak
+-rw-rw-r-- 1 vyong vyong     0 May  8 15:30 client-script
+-rw-r--r-- 1 vyong vyong   249 May  8 15:23 Makefile
+-rw-rw-r-- 1 vyong vyong  2510 May  8 15:29 out.txt
+-rwxrwxr-x 1 vyong vyong   810 May  8 15:23 proj2common.c
+-rwxrwxr-x 1 vyong vyong   353 May  8 15:23 proj2common.h
+-rw-r--r-- 1 vyong vyong  1159 May  8 15:23 test1.txt
+-rw-r--r-- 1 vyong vyong  2510 May  8 15:23 test2.txt
+-rwxrwxr-x 1 vyong vyong 13966 May  8 15:24 udpclient
+-rw-r--r-- 1 vyong vyong  9326 May  8 15:23 udpclient.c
+-rwxrwxr-x 1 vyong vyong 13938 May  8 15:24 udpserver
+-rw-r--r-- 1 vyong vyong  8002 May  8 15:23 udpserver.c
+vyong@cisc450:~/cisc450/proj2$ ./udpclient 0.[K 0
+Packet Loss Rate: 0.000000, ACK Loss Rate: 0.000000
+Please input name of file:
+test2.txt
+Packet 0 received with 58 data bytes
+ACK 0 transmitted
+Packet 1 received with 64 data bytes
+ACK 1 transmitted
+Packet 0 received with 57 data bytes
+ACK 0 transmitted
+Packet 1 received with 28 data bytes
+ACK 1 transmitted
+Packet 0 received with 57 data bytes
+ACK 0 transmitted
+Packet 1 received with 63 data bytes
+ACK 1 transmitted
+Packet 0 received with 50 data bytes
+ACK 0 transmitted
+Packet 1 received with 58 data bytes
+ACK 1 transmitted
+Packet 0 received with 55 data bytes
+ACK 0 transmitted
+Packet 1 received with 19 data bytes
+ACK 1 transmitted
+Packet 0 received with 1 data bytes
+ACK 0 transmitted
+Packet 1 received with 79 data bytes
+ACK 1 transmitted
+Packet 0 received with 1 data bytes
+ACK 0 transmitted
+Packet 1 received with 1 data bytes
+ACK 1 transmitted
+Packet 0 received with 50 data bytes
+ACK 0 transmitted
+Packet 1 received with 47 data bytes
+ACK 1 transmitted
+Packet 0 received with 35 data bytes
+ACK 0 transmitted
+Packet 1 received with 75 data bytes
+ACK 1 transmitted
+Packet 0 received with 79 data bytes
+ACK 0 transmitted
+Packet 1 received with 1 data bytes
+ACK 1 transmitted
+Packet 0 received with 79 data bytes
+ACK 0 transmitted
+Packet 1 received with 1 data bytes
+ACK 1 transmitted
+Packet 0 received with 79 data bytes
+ACK 0 transmitted
+Packet 1 received with 1 data bytes
+ACK 1 transmitted
+Packet 0 received with 32 data bytes
+ACK 0 transmitted
+Packet 1 received with 53 data bytes
+ACK 1 transmitted
+Packet 0 received with 2 data bytes
+ACK 0 transmitted
+Packet 1 received with 2 data bytes
+ACK 1 transmitted
+Packet 0 received with 2 data bytes
+ACK 0 transmitted
+Packet 1 received with 4 data bytes
+ACK 1 transmitted
+Packet 0 received with 1 data bytes
+ACK 0 transmitted
+Packet 1 received with 2 data bytes
+ACK 1 transmitted
+Packet 0 received with 2 data bytes
+ACK 0 transmitted
+Packet 1 received with 36 data bytes
+ACK 1 transmitted
+Packet 0 received with 1 data bytes
+ACK 0 transmitted
+Packet 1 received with 58 data bytes
+ACK 1 transmitted
+Packet 0 received with 1 data bytes
+ACK 0 transmitted
+Packet 1 received with 17 data bytes
+ACK 1 transmitted
+Packet 0 received with 61 data bytes
+ACK 0 transmitted
+Packet 1 received with 61 data bytes
+ACK 1 transmitted
+Packet 0 received with 61 data bytes
+ACK 0 transmitted
+Packet 1 received with 61 data bytes
+ACK 1 transmitted
+Packet 0 received with 61 data bytes
+ACK 0 transmitted
+Packet 1 received with 61 data bytes
+ACK 1 transmitted
+Packet 0 received with 61 data bytes
+ACK 0 transmitted
+Packet 1 received with 61 data bytes
+ACK 1 transmitted
+Packet 0 received with 15 data bytes
+ACK 0 transmitted
+Packet 1 received with 1 data bytes
+ACK 1 transmitted
+Packet 0 received with 76 data bytes
+ACK 0 transmitted
+Packet 1 received with 79 data bytes
+ACK 1 transmitted
+Packet 0 received with 1 data bytes
+ACK 0 transmitted
+Packet 1 received with 71 data bytes
+ACK 1 transmitted
+Packet 0 received with 79 data bytes
+ACK 0 transmitted
+Packet 1 received with 1 data bytes
+ACK 1 transmitted
+Packet 0 received with 61 data bytes
+ACK 0 transmitted
+Packet 1 received with 1 data bytes
+ACK 1 transmitted
+Packet 0 received with 1 data bytes
+ACK 0 transmitted
+Packet 1 received with 79 data bytes
+ACK 1 transmitted
+Packet 0 received with 1 data bytes
+ACK 0 transmitted
+Packet 1 received with 79 data bytes
+ACK 1 transmitted
+Packet 0 received with 1 data bytes
+ACK 0 transmitted
+Packet 1 received with 79 data bytes
+ACK 1 transmitted
+Packet 0 received with 1 data bytes
+ACK 0 transmitted
+Packet 1 received with 79 data bytes
+ACK 1 transmitted
+Packet 0 received with 1 data bytes
+ACK 0 transmitted
+Packet 1 received with 39 data bytes
+ACK 1 transmitted
+Packet 0 received with 26 data bytes
+ACK 0 transmitted
+End of Transmission Packet with sequence number 1 received with 4 data bytes
+Statistics:
+Number of data packets received successfully (without loss, without duplicates):67
+Total number of data bytes received:2510
+Total number of duplicate data packets received:0
+Number of data packets received but dropped due to loss:0
+Total number of data packets received:68
+Number of ACKs transmitted without loss:67
+Number of ACKs generated but dropped due to loss:0
+Total number of ACKs generated (with and without loss):67
+Client socket closed with code 0
+vyong@cisc450:~/cisc450/proj2$ cat out.txt
+In this project, you will implement a client and a server
+which use TCP to transmit a file from the server to the client.
+Both the client and the server will run on the course VM
+{\em cisc450.cis.udel.edu},
+but they should be written in such a way that they could
+conceivably be run on any two hosts, not necessarily the same.
+For convenience, both the hostname and the server
+port number may be hardcoded into both client and server,
+but this should be done in such a way that they should
+be easy to change.
+
+The server starts by waiting for a connection request from the client. %printin
+
+The client starts by prompting the user to enter 
+%the hostname and port number for the server. 
+%It then prompts the user to enter
+the name of the file to be transferred. The client then sends a connection
+request to the server.  After the connection is established, the client sends a
+filename to the server. The server reads the file and sends it to the client in
+a series of packets as described below. The client receives the file and stores
+it with the name {\em out.txt}.
+When the file transfer is complete, both the client 
+A
+B
+C
+DEF
+
+G
+H
+and the server terminate execution.
+
+The format of a data packet is shown in the figure below:
+
+\begin{verbatim}
+    <----------------- 16 bits (2 bytes) ------------------>
+    --------------------------------------------------------
+    |                Packet Sequence Number                |
+    --------------------------------------------------------
+    |              Count (no. of data bytes)               |
+    --------------------------------------------------------
+    |            Data Bytes      |          ...            |
+    --------------------------------------------------------
+\end{verbatim}
+
+Each data packet contains a 4-byte long header followed by a number of data
+characters.  The header contains  2 fields, each of length 16 bits (2 bytes) as
+shown in the figure above. You must convert the values in these fields
+into the network byte order when they are transmitted, and convert them back to
+convert them back to host byte order when they are received.
+
+
+The first field of the header is called the packet sequence number. Each packet
+transmitted  by the  server is  assigned a sequence number  starting with 1 and
+incremented by 1 for each packet.  The second field of the header is a count of
+data characters in the packet. This value must be in the range 0 through 80. If
+the count is 0, then there are no data
+characters in the packet.
+vyong@cisc450:~/cisc450/proj2$ diff out.trx[K[K[Ktxt tes[Kst2.txt
+vyong@cisc450:~/cisc450/proj2$ exit
+exit
+
+Script done on Tue 08 May 2018 03:33:18 PM EDT
