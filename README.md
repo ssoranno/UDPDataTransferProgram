@@ -4,7 +4,7 @@ These C programs implement the Stop and Wait Protocol to facilitate the reliable
 
 ## Requirements
 C compiler<br>
-Bash Shell or Linux/Mac OS
+Bash Shell for Windows or Linux/Mac OS
 
 ## How to run?
 1. clone git repo
