@@ -19,7 +19,7 @@ The second argument entered into the udpserver program is the ACK Loss rate.  Th
 Example: ./udpclient test1.txt 0.5 0.5<br>
 The example above runs the UDP client with a packet loss rate of 0.5 and an ACK loss of 0.5.
 
-The only arguement for the udpserver program is the timeout.  The timeout is a integer value n in the range 1-10 that represents the timeout range stored as 10^n microseconds.
+The only argument for the udpserver program is the timeout.  The timeout is a integer value n in the range 1-10 that represents the timeout range stored as 10^n microseconds.
 
 Example: ./udpserver 2<br>
 The example above runs the UDP server with a timeout value of 100 microseconds.
@@ -30,15 +30,15 @@ These programs implements finite state machine for Reliable Data Transfer 3.1 us
 ### UDP Server Actions:
 The server begins by waiting for a connection from a client containing the filename to transfer. Once it receives a connection and a filename the server enters the rdt3.1 FSM for a sender.<br>
 
-The server has two states, “Wait for call from above” and “Wait for ACK”.  The server starts in state "Wait for Call from Above" and then when the server receives a connection from a client the server creates a packet with the first line of data in the file and a sequence number of 1.  Then the program moves to the next state which is "Wait for Ack", and it sends the first packet to the server.  When the server receives an ACK from the client, it checks to make sure the sequence number is correct.  If the sequence number it incorrect, the server remains in the "Wait for ACK" state until the timeout is up.  When the timeout is complete and no ACK was received, the server resends the packet.  If the sequence number on the ACK is correct, the server returns to the "Wait for call from above" state which restarts the process.
+The server has two states, “Wait for call from above” and “Wait for ACK”.  The server starts in state "Wait for Call from Above" and then when the server receives a connection from a client the server creates a packet with the first line of data in the file and a sequence number of 1.  Then the program moves to the next state which is "Wait for ACK", and it sends the first packet to the server.  When the server receives an ACK from the client, it checks to make sure the sequence number is correct.  If the sequence number it incorrect, the server remains in the "Wait for ACK" state until the timeout is up.  When the timeout is complete and no ACK was received, the server resends the packet.  If the sequence number on the ACK is correct, the server returns to the "Wait for call from above" state which restarts the process.
 
 ### UDP Client Actions:
-The client begins by promting the user for the name of the file they wish to receive from the server.  Once the user enters the filename, a packet is created containing the filename and is sent to the server.  The client then enters the the rdt3.1 FSM for a receiver.<br>
+The client begins by prompting the user for the name of the file they wish to receive from the server.  Once the user enters the filename, a packet is created containing the filename and is sent to the server.  The client then enters the rdt3.1 FSM for a receiver.<br>
 
-The client has only one state, "Wait for call from below".  When the client recieves a data packet from the server, it checks to make sure the sequence number on that packet is correct and matches the one the client expects.  If the sequence number is not correct, the client sends an ACK packet back to the server with 1 subtracted from the expected sequence number.  If the sequence is correct, the client sends an ACK packet to the sever with the expected sequence number.  Then the sequence number is changed and the client waits for the next data packet.
+The client has only one state, "Wait for call from below".  When the client receives a data packet from the server, it checks to make sure the sequence number on that packet is correct and matches the one the client expects.  If the sequence number is not correct, the client sends an ACK packet back to the server with 1 subtracted from the expected sequence number.  If the sequence is correct, the client sends an ACK packet to the server with the expected sequence number.  Then the sequence number is changed and the client waits for the next data packet.
 
 ### Output
-When the client and server programs run, they print statisticcs based on the which packets were sent an received.  The symbol “n” below refers to the sequence number of the transmitted or received packet (note that the sequence number must always be either 0 or 1), and the symbol “c” below refers to the count (number of data bytes) in the transmitted or received packet.<br>
+When the client and server programs run, they print statistics based on which packets were sent and received.  The symbol “n” below refers to the sequence number of the transmitted or received packet (note that the sequence number must always be either 0 or 1), and the symbol “c” below refers to the count (number of data bytes) in the transmitted or received packet.<br>
 
 The messages to be printed by the server are:<br>
 
