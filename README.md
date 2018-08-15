@@ -42,50 +42,50 @@ When the client and server programs run, they print statisticcs based on the whi
 
 The messages to be printed by the server are:<br>
 
-When a new data packet numbered n is sent by the server:
-  *Packet n transmitted with c data bytes*
-When a data packet numbered n is retransmitted by the server:
-  *Packet n retransmitted with c data bytes*
-When a timeout expires:
-  *Timeout expired for packet numbered n*
-When an ACK is received with number n:
-  *ACK n received*
-When the “End of Transmission” packet is sent:
-  *End of Transmission Packet with sequence number n transmitted with c data bytes*
+When a new data packet numbered n is sent by the server:<br>
+⋅⋅⋅*Packet n transmitted with c data bytes*<br>
+When a data packet numbered n is retransmitted by the server:<br>
+⋅⋅⋅*Packet n retransmitted with c data bytes*<br>
+When a timeout expires:<br>
+⋅⋅⋅*Timeout expired for packet numbered n*<br>
+When an ACK is received with number n:<br>
+⋅⋅⋅*ACK n received*<br>
+When the “End of Transmission” packet is sent:<br>
+⋅⋅⋅*End of Transmission Packet with sequence number n transmitted with c data bytes*<br>
 
 The messages to be printed by the client are:<br>
 
-When a data packet numbered n is received correctly by the client for the first time:
-  *Packet n received with c data bytes*
-When a data packet numbered n is received correctly by the client, but is a duplicate packet:
-  *Duplicate packet n received with c data bytes*
-When a data packet numbered n is received by the client, but the SimulateLoss function causes it to be dropped:
-  *Packet n lost*
-When an ACK is generated with number n, but is dropped by the function SimulateACKLoss:
-  *ACK n lost*
-When an ACK is generated with number n and transmitted without loss:
-  *ACK n transmitted*
-When the “End of Transmission” packet is received:
-  *End of Transmission Packet with sequence number n received with c data bytes*
+When a data packet numbered n is received correctly by the client for the first time:<br>
+⋅⋅⋅*Packet n received with c data bytes*<br>
+When a data packet numbered n is received correctly by the client, but is a duplicate packet:<br>
+⋅⋅⋅*Duplicate packet n received with c data bytes*<br>
+When a data packet numbered n is received by the client, but the SimulateLoss function causes it to be dropped:<br>
+⋅⋅⋅*Packet n lost*<br>
+When an ACK is generated with number n, but is dropped by the function SimulateACKLoss:<br>
+⋅⋅⋅*ACK n lost*<br>
+When an ACK is generated with number n and transmitted without loss:<br>
+⋅⋅⋅*ACK n transmitted*<br>
+When the “End of Transmission” packet is received:<br>
+⋅⋅⋅*End of Transmission Packet with sequence number n received with c data bytes*<br>
 
 At the end, before terminating execution, the following statistics will be printed. 
 
 For server:
 
-Number of data packets transmitted (initial transmission only)
-Total number of data bytes transmitted (this should be the sum of the count fields of all transmitted packets when transmitted for the first time only)
-Total number of retransmissions
-Total number of data packets transmitted (initial transmissions plus retransmissions)
-Number of ACKs received
-Count of how many times timeout expired
+Number of data packets transmitted (initial transmission only)<br>
+Total number of data bytes transmitted (this should be the sum of the count fields of all transmitted packets when transmitted for the first time only)<br>
+Total number of retransmissions<br>
+Total number of data packets transmitted (initial transmissions plus retransmissions)<br>
+Number of ACKs received<br>
+Count of how many times timeout expired<br>
 
 For client:
 
-Number of data packets received successfully (without loss, without duplicates)
-Total number of data bytes received which are delivered to user (this should be the sum of the count fields of all packets received successfully without loss without duplicates)
-Total number of duplicate data packets received (without loss)
-Number of data packets received but dropped due to loss
-Total number of data packets received (including those that were successful, those lost, and duplicates)
-Number of ACKs transmitted without loss
-Number of ACKs generated but dropped due to loss
-Total number of ACKs generated (with and without loss)
+Number of data packets received successfully (without loss, without duplicates)<br>
+Total number of data bytes received which are delivered to user (this should be the sum of the count fields of all packets received successfully without loss without duplicates)<br>
+Total number of duplicate data packets received (without loss)<br>
+Number of data packets received but dropped due to loss<br>
+Total number of data packets received (including those that were successful, those lost, and duplicates)<br>
+Number of ACKs transmitted without loss<br>
+Number of ACKs generated but dropped due to loss<br>
+Total number of ACKs generated (with and without loss)<br>
